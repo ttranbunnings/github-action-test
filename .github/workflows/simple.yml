@@ -26,3 +26,11 @@ jobs:
       - name: Directory Bash
         run: pwd
         shell: bash
+
+  run-shell-mac-command:
+    runs-on: macos-latest
+    steps:
+      - name: echo a string
+        run: echo "Hi Mac"
+      - name: check what shell i am using
+        run: echo $0
