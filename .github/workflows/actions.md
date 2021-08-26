@@ -48,3 +48,4 @@ echo "${{ github.token}}"
 
 ## Actions can be found via [Github Marketplace](https://github.com/marketplace)
 
+## Event that trigger Workflow [Documentation](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request)
