@@ -51,3 +51,5 @@ echo "${{ github.token}}"
 ## Event that trigger Workflow [Documentation](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request)
 
 ## Cron tap : https://crontab.guru/#0/15_*_*_*_*
+
+## RepositoryDispatch event, trigger when a post request called to some endpoint.
