@@ -1,0 +1,30 @@
+name: Actions Workflow
+
+on: 
+  push:
+    branches:
+      - master
+jobs: 
+  run-github-actions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: List Files
+        run: |
+          pwd
+          ls -a
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Setup .NET Core SDK 3.1
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
+        run: |
+          dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
+          livingdoc -h
+          
+      - name: List Files after checkout
+        run: |
+          pwd
+          ls -a
